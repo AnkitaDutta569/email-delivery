@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <link rel="stylesheet" href="index2.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+    <title>Mass mail disspatcher</title>
+</head>
+<body class="card">
+   
+  <div class="">
+    <form method="post">
+      <div class="seperate">
+        <label for="senderEmail" style="color: white; font-size: smaller;">From :</label>
+        <input type="email" id="senderEmail" name="senderEmail" required>
+    
+        <br><br><br>
+    
+        <label for="subject" style="margin-top: -2em;z-index: 22;position: absolute; color: white; font-size: smaller;">Subject:</label>
+        <textarea id="subject" name="subject" required></textarea>
+    
+        <br><br><br><br>
+    
+        <label for="csvFile" style="color: white; font-size: smaller; margin-top: 0px;">CSV File:</label>
+        <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
+    
+        <br><br>
+    
+        <label for="message" style="color: white;font-size: smaller;">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+    
+        <br><br>
+        
+        <input class = "button-send"type="button" value="Send Emails" style="font-weight: bold;" onclick="sendEmails()">
+    
+        <br>
+    
+        <div style="display:flex">
+          <div>
+            <p style="color: #d9e0e4;font-size: smaller;">Valid Emails: <span id="validEmailCount"></span></p>
+            <div id="validEmails" style="float: left"></div>
+          </div>
+          <div style="margin-left: 15px">
+            <p style="color: #f6f9fb; font-size: smaller;">Invalid Emails: <span id="invalidEmailCount"></span></p>
+            <div id="invalidEmails" style="float: left"></div>
+          </div>
+        </div>
+      </div>
+      </form>
+  </div>
+  <script src="index2.js"></script>
+</body>
+</html>
